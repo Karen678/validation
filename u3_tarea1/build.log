@@ -1,0 +1,15 @@
+hugo -d dist/
+Start building sites … 
+
+                   | EN  
+-------------------+-----
+  Pages            | 10  
+  Paginator pages  |  0  
+  Non-page files   |  0  
+  Static files     |  6  
+  Processed images |  0  
+  Aliases          |  1  
+  Sitemaps         |  1  
+  Cleaned          |  0  
+
+Total in 812 ms

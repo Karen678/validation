@@ -1,0 +1,35 @@
+name: u3_tarea1
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *' # Ejecutar diariamente a medianoche
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Install dependencies
+      run: |
+        chmod +x setup.sh
+        ./setup.sh
+        
+    - name: Run lint
+      run: make lint
+      
+    - name: Run build
+      run: make build
+      
+    - name: Run unit-tests
+      run: make unit-tests
+      
+    - name: Run validate
+      run: make validate
+      
+    - name: Run integration-tests
+      run: make integration-tests

@@ -1,0 +1,5 @@
+baseURL = "/"
+languageCode = "es"
+title = "Tec-Net S.A."
+theme = "ananke"
+
